@@ -1,3 +1,49 @@
+.container {
+  width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}
+
+.hover-up-5 {
+  transition: 0.3s;
+}
+
+.hover-up-5:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.hover-up-2 {
+  transition: 0.3s;
+}
+
+.hover-up-2:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
 .form-header {
   color: white;
   padding: 40px;
@@ -188,4 +234,28 @@
   margin-bottom: 20px;
   border: 1px solid #bbf7d0;
   display: none;
+}
+
+/*Animation*/
+@-webkit-keyframes jump {
+  0% {
+    transform: translate3d(0, 15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.jump {
+  transform-origin: 0;
+  -webkit-animation: jump 1s linear alternate infinite;
+  animation: jump 1s linear alternate infinite;
 }

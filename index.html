@@ -12,33 +12,18 @@
     />
     <meta name="description" content="Tailwind CSS Saas Landing Page" />
     <meta name="author" content="alithemes.com" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="static/favicon.svg"
-    />
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon.svg" />
     <!-- Vendor CSS -->
-    <link
-      rel="stylesheet"
-      href="static/slick.css"
-    />
-    <!-- Template CSS -->
-    <link
-      rel="stylesheet"
-      href="static/tailwind-built.css"
-    />
-    <link rel="stylesheet" href="static/form.css" />
+    <link rel="stylesheet" href="static/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-white text-body font-body" style="overflow: visible">
     <div class="main">
       <!--Header-->
-      <header class="bg-transparent sticky-bar mt-4 stick">
+      <header class="bg-transparent sticky-bar mt-4">
         <div class="container bg-transparent">
           <nav class="bg-transparent flex justify-between items-center py-3">
-            <a
-              class="text-3xl font-semibold leading-none"
-            >
+            <a class="text-3xl font-semibold leading-none">
               <img
                 class="h-10"
                 src="https://www.trafongroup.com/wp-content/uploads/2019/04/logo-placeholder.png"
@@ -47,37 +32,33 @@
             </a>
             <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li class="relative pt-4 pb-4">
-                <a
-                  class="text-sm font-semibold"
-                  >Acasa</a
-                >
+                <a class="text-sm font-semibold text-green-600">Acasa</a>
               </li>
               <li class="pt-4 pb-4">
                 <a
-                  class="text-sm font-semibold"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
                   >Despre noi</a
                 >
               </li>
               <li class="pt-4 pb-4">
                 <a
-                  class="text-sm font-semibold"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
                   >Servicii</a
                 >
               </li>
               <li class="relative pt-4 pb-4">
                 <a
-                  class="text-sm font-semibold"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
                   >Contact</a
                 >
               </li>
               <li class="relative pt-4 pb-4">
                 <a
-                  class="text-sm font-semibold"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
                   >Desfasurare Proiect</a
                 >
               </li>
             </ul>
-
             <div class="lg:hidden">
               <button
                 class="navbar-burger flex items-center py-2 px-3 text-green-600 hover:text-green-700 rounded border border-green-200 hover:border-green-300"
@@ -96,17 +77,15 @@
         </div>
       </header>
       <!--Mobile menu-->
-      <div class="hidden navbar-menu relative z-50 transition duration-300">
-        <div
-          class="navbar-backdrop fixed inset-0 opacity-25"
-        ></div>
+      <div
+        class="hidden md:hidden navbar-menu relative z-50 transition duration-300"
+      >
+        <div class="navbar-backdrop fixed inset-0 opacity-25"></div>
         <nav
           class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
         >
           <div class="flex items-center mb-8">
-            <a
-              class="mr-auto text-3xl font-semibold leading-none"
-            >
+            <a class="mr-auto text-3xl font-semibold leading-none">
               <img
                 class="h-10"
                 src="https://www.trafongroup.com/wp-content/uploads/2019/04/logo-placeholder.png"
@@ -150,14 +129,12 @@
                   >Servicii / Produse</a
                 >
               </li>
-
               <li class="mb-1 menu-itemren rounded-xl">
                 <a
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
                   >Contact</a
                 >
               </li>
-
               <li class="mb-1">
                 <a
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
@@ -169,32 +146,31 @@
           <div class="mt-auto">
             <p class="my-4 text-xs">
               <span>Contacteaza-ne</span>
-              <a
-                class="text-green-600 hover:text-green-500 underline"
+              <a class="text-green-600 hover:text-green-500 underline"
                 >contact@domeniu.ro</a
               >
             </p>
-            <a
-              class="inline-block px-1"
-            >
+            <a class="inline-block px-1">
               <img
+                width="20"
+                height="20"
                 src="static/facebook-green.svg"
                 alt=""
               />
             </a>
-            <a
-              class="inline-block px-1"
-            >
+            <a class="inline-block px-1">
               <img
-                src="static/twitter-green.svg"
+                width="20"
+                height="20"
+                src="static/instagram-green.svg"
                 alt=""
               />
             </a>
-            <a
-              class="inline-block px-1"
-            >
+            <a class="inline-block px-1">
               <img
-                src="static/instagram-green.svg"
+                width="20"
+                height="20"
+                src="static/threads-green.svg"
                 alt=""
               />
             </a>
@@ -202,12 +178,7 @@
         </nav>
       </div>
       <!--Hero-->
-      <section
-        class="xl:bg-contain bg-top bg-no-repeat -mt-24 pt-24"
-        style="
-          background-image: url(&#39;assets/imgs/backgrounds/intersect.svg&#39;);
-        "
-      >
+      <section class="-mt-24 pt-24">
         <div class="container px-4 mx-auto">
           <div class="pt-12 text-center">
             <div class="max-w-2xl mx-auto mb-8">
@@ -222,7 +193,7 @@
                 class="leading-relaxed"
                 style="visibility: visible; animation-name: fadeIn"
               >
-                Suntem <strong  class="text-green-600">NUME FIRMA</strong>,
+                Suntem <strong class="text-green-600">NUME FIRMA</strong>,
                 specializați în
                 <span
                   class="typewrite d-inline text-brand"
@@ -232,20 +203,10 @@
                 >
               </p>
             </div>
-            <div>
-              <a
-                class="btn-white Up hover-up-2"
-                style="visibility: visible; animation-name: fadeInUp"
-                >Cum lucram ?</a
-              >
-            </div>
           </div>
         </div>
         <div class="relative max-w-6xl mt-16 md:mt-8 mb-8 mx-auto">
-          <img
-            src="static/pattern.png"
-            alt=""
-          />
+          <img src="static/pattern.png" alt="" />
           <div
             class="absolute"
             style="top: 9%; left: 14%; width: 72%; height: 66%"
@@ -291,9 +252,7 @@
                 <span class="sm:text-2xl font-bold font-heading count"
                   >150</span
                 >
-                <p class="text-xs sm:text-base">
-                  Statistica 1
-                </p>
+                <p class="text-xs sm:text-base">Statistica 1</p>
               </div>
             </div>
             <div
@@ -326,9 +285,7 @@
                 <span class="sm:text-2xl font-bold font-heading">+ </span>
                 <span class="sm:text-2xl font-bold font-heading count">56</span>
                 <span class="sm:text-2xl font-bold font-heading"> k </span>
-                <p class="text-xs sm:text-base">
-                  Statistica 2
-                </p>
+                <p class="text-xs sm:text-base">Statistica 2</p>
               </div>
             </div>
             <div
@@ -362,9 +319,7 @@
                 <span class="sm:text-2xl font-bold font-heading count"
                   >500</span
                 >
-                <p class="text-xs sm:text-base">
-                  Statistica 3
-                </p>
+                <p class="text-xs sm:text-base">Statistica 3</p>
               </div>
             </div>
             <div
@@ -398,9 +353,7 @@
                 <span class="sm:text-2xl font-bold font-heading count"
                   >320</span
                 >
-                <p class="text-xs sm:text-base">
-                  Statistica 4
-                </p>
+                <p class="text-xs sm:text-base">Statistica 4</p>
               </div>
             </div>
           </div>
@@ -419,15 +372,6 @@
                 style="visibility: visible; animation-name: fadeIn"
               >
                 <div class="mb-4">
-                  <span
-                    class="text-xs py-1 px-3 text-green-600 font-semibold bg-green-50 rounded-xl Down"
-                    style="
-                      visibility: visible;
-                      animation-delay: 0.9s;
-                      animation-name: fadeInDown;
-                    "
-                    >O alegere buna !</span
-                  >
                   <h2
                     class="text-4xl mt-5 font-bold font-heading Up"
                     style="visibility: visible; animation-name: fadeInUp"
@@ -463,7 +407,7 @@
                     <h3 class="mb-2 text-xl font-semibold font-heading">
                       Titlu 1
                     </h3>
-                    <p class= leading-loose">
+                    <p class="leading-loose">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Veritatis expedita animi.
                     </p>
@@ -503,7 +447,7 @@
                     <h3 class="mb-2 text-xl font-semibold font-heading">
                       Titlu 2
                     </h3>
-                    <p class= leading-loose">
+                    <p class="leading-loose">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Veritatis expedita animi.
                     </p>
@@ -537,7 +481,7 @@
                     <h3 class="mb-2 text-xl font-semibold font-heading">
                       Titlu 3
                     </h3>
-                    <p class= leading-loose">
+                    <p class="leading-loose">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Veritatis expedita animi.
                     </p>
@@ -592,7 +536,7 @@
             </div>
             <div class="w-full lg:w-1/2 lg:pl-16">
               <p
-                class= leading-loose Up"
+                class="leading-loose Up"
                 style="visibility: visible; animation-name: fadeInUp"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -610,11 +554,7 @@
                 >
                   1
                 </div>
-                <img
-                  class="h-48 mx-auto my-4"
-                  src="static/eating.svg"
-                  alt=""
-                />
+                <img class="h-48 mx-auto my-4" src="static/eating.svg" alt="" />
                 <h3 class="mb-2 font-bold font-heading">Pas 1</h3>
                 <p class="text-sm leading-relaxed">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -632,11 +572,7 @@
                 >
                   2
                 </div>
-                <img
-                  class="h-48 mx-auto my-4"
-                  src="static/space.svg"
-                  alt=""
-                />
+                <img class="h-48 mx-auto my-4" src="static/space.svg" alt="" />
                 <h3 class="mb-2 font-bold font-heading">Pas 2</h3>
                 <p class="text-sm leading-relaxed">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -654,11 +590,7 @@
                 >
                   3
                 </div>
-                <img
-                  class="h-48 mx-auto my-4"
-                  src="static/tasks.svg"
-                  alt=""
-                />
+                <img class="h-48 mx-auto my-4" src="static/tasks.svg" alt="" />
                 <h3 class="mb-2 font-bold font-heading">Pas 3</h3>
                 <p class="text-sm leading-relaxed">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -696,62 +628,47 @@
             </div>
             <div class="w-full lg:w-2/3 flex flex-wrap">
               <div class="relative w-full">
-                <div
-                  class="carausel-2-columns slick-carausel slick-initialized slick-slider"
-                  id="carausel-2-columns-1"
-                >
-                  <div>
-                    <div class="slick-track">
-                      <div class="px-3 pb-5 slick-slide">
-                        <div class="card-slider group">
-                          <img
-                            class="rounded-xl"
-                            src="static/img-2.jpg"
-                            alt=""
-                          />
-                          <div class="flex justify-between items-end">
-                            <div>
-                              <h1
-                                class="mt-5 text-xl font-semibold group-hover:text-green-500"
-                              >
-                                Titlu 1
-                              </h1>
-                              <p class="mt-2 text-xs text-gray-500">Subtitlu</p>
-                            </div>
-                            <div>
-                              <a
-                                class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-green-600 font-semibold leading-none border border-green-200 hover:border-green-500 hover:text-white hover:bg-green-500 rounded"
-                                tabindex="0"
-                                >Vezi postare</a
-                              >
-                            </div>
-                          </div>
+                <div class="grid md:grid-cols-2" id="carausel-2-columns-1">
+                  <div class="px-3 pb-5">
+                    <div class="group">
+                      <img class="rounded-xl" src="static/img-2.jpg" alt="" />
+                      <div class="flex justify-between items-end">
+                        <div>
+                          <h1
+                            class="mt-5 text-xl font-semibold group-hover:text-green-500"
+                          >
+                            Titlu 1
+                          </h1>
+                          <p class="mt-2 text-xs text-gray-500">Subtitlu</p>
+                        </div>
+                        <div>
+                          <a
+                            class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-green-600 font-semibold leading-none border border-green-200 hover:border-green-500 hover:text-white hover:bg-green-500 rounded"
+                            tabindex="0"
+                            >Vezi postare</a
+                          >
                         </div>
                       </div>
-                      <div class="px-3 pb-5">
-                        <div class="card-slider group">
-                          <img
-                            class="rounded-xl"
-                            src="static/img-3.jpg"
-                            alt=""
-                          />
-                          <div class="flex justify-between items-end">
-                            <div>
-                              <h1
-                                class="mt-5 text-xl font-semibold group-hover:text-green-500"
-                              >
-                                Titlu 2
-                              </h1>
-                              <p class="mt-2 text-xs text-gray-500">Subtitlu</p>
-                            </div>
-                            <div>
-                              <a
-                                class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-green-600 font-semibold leading-none border border-green-200 hover:border-green-500 hover:text-white hover:bg-green-500 rounded"
-                                tabindex="0"
-                                >Vezi postare</a
-                              >
-                            </div>
-                          </div>
+                    </div>
+                  </div>
+                  <div class="px-3 pb-5">
+                    <div class="group">
+                      <img class="rounded-xl" src="static/img-3.jpg" alt="" />
+                      <div class="flex justify-between items-end">
+                        <div>
+                          <h1
+                            class="mt-5 text-xl font-semibold group-hover:text-green-500"
+                          >
+                            Titlu 2
+                          </h1>
+                          <p class="mt-2 text-xs text-gray-500">Subtitlu</p>
+                        </div>
+                        <div>
+                          <a
+                            class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-green-600 font-semibold leading-none border border-green-200 hover:border-green-500 hover:text-white hover:bg-green-500 rounded"
+                            tabindex="0"
+                            >Vezi postare</a
+                          >
                         </div>
                       </div>
                     </div>
@@ -762,25 +679,20 @@
           </div>
         </div>
       </section>
-      <section
-        class="bg-top bg-no-repeat"
-        style="background-image: url(&#39;assets/imgs/elements/blob.svg&#39;)"
-      >
+      <section class="bg-top bg-no-repeat">
         <div class="container">
-          <div class="form-header" style="color: black;">
+          <div class="form-header" style="color: black">
             <h2>Contactează-ne</h2>
             <p>
               Suntem aici pentru a răspunde întrebărilor tale despre serviciile
               noastre de reciclare
             </p>
           </div>
-
           <div class="form-content">
             <div class="success-message" id="successMessage">
               Mesajul tău a fost trimis cu succes! Te vom contacta în cel mai
               scurt timp.
             </div>
-
             <form id="contactForm" onsubmit="handleSubmit(event)">
               <div class="form-grid">
                 <div class="form-group">
@@ -796,7 +708,6 @@
                     placeholder="Introduceți numele"
                   />
                 </div>
-
                 <div class="form-group">
                   <label class="form-label" for="prenume">
                     Prenume <span class="required">*</span>
@@ -810,7 +721,6 @@
                     placeholder="Introduceți prenumele"
                   />
                 </div>
-
                 <div class="form-group">
                   <label class="form-label" for="companie"> Companie </label>
                   <input
@@ -821,7 +731,6 @@
                     placeholder="Numele companiei"
                   />
                 </div>
-
                 <div class="form-group">
                   <label class="form-label" for="telefon">
                     Număr de telefon <span class="required">*</span>
@@ -835,7 +744,6 @@
                     placeholder="+40 7XX XXX XXX"
                   />
                 </div>
-
                 <div class="form-full-width">
                   <label class="form-label" for="email">
                     Email <span class="required">*</span>
@@ -849,7 +757,6 @@
                     placeholder="exemplu@email.com"
                   />
                 </div>
-
                 <div class="form-full-width">
                   <label class="form-label" for="mesaj">
                     Mesaj <span class="required">*</span>
@@ -863,11 +770,11 @@
                   ></textarea>
                 </div>
               </div>
-
-              <button type="submit" class="submit-btn bg-green-600">Trimite Mesajul</button>
+              <button type="submit" class="submit-btn bg-green-600">
+                Trimite Mesajul
+              </button>
             </form>
           </div>
-
           <div class="contact-info">
             <h3>Informații de Contact</h3>
             <div class="info-grid">
@@ -897,7 +804,6 @@
             </div>
           </div>
         </div>
-
         <!-- Buton WhatsApp flotant -->
         <button
           class="whatsapp-btn flex items-center justify-center"
@@ -955,23 +861,19 @@
               <p
                 class="max-w-md mx-auto lg:max-w-full lg:mx-0 lg:pr-32 lg:text-lg leading-relaxed"
               >
-              Reciclare eficientă <strong>management inteligent</strong>.
+                Reciclare eficientă <strong>management inteligent</strong>.
               </p>
             </div>
             <div class="w-full lg:w-1/5 px-3 mb-8 lg:mb-0">
-              <p
-                class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading"
-              >
+              <p class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading">
                 Office
               </p>
               <p class="lg:text-lg">
-               Pitești, Argeș, România, Strada Reciclarii
+                Pitești, Argeș, România, Strada Reciclarii
               </p>
             </div>
             <div class="w-full lg:w-1/5 px-3">
-              <p
-                class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading"
-              >
+              <p class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading">
                 Contacts
               </p>
               <p class="lg:text-lg">+40 123 456 789</p>
@@ -983,35 +885,30 @@
           >
             <p class="text-sm">
               © 2025. All rights reserved.
-              <a
-                class="text-green-400"
-                href="/"
-                target="_blank"
-                >NUME FIRMA</a
-              >
+              <a class="text-green-400" href="/" target="_blank">NUME FIRMA</a>
             </p>
             <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0">
-              <a
-                class="inline-block px-2"
-              >
+              <a class="inline-block px-2">
                 <img
+                  width="20"
+                  height="20"
                   src="static/facebook-green.svg"
                   alt=""
                 />
               </a>
-              <a
-                class="inline-block px-2"
-              >
+              <a class="inline-block px-2">
                 <img
-                  src="static/twitter-green.svg"
+                  width="20"
+                  height="20"
+                  src="static/instagram-green.svg"
                   alt=""
                 />
               </a>
-              <a
-                class="inline-block px-2"
-              >
+              <a class="inline-block px-2">
                 <img
-                  src="static/instagram-green.svg"
+                  width="20"
+                  height="20"
+                  src="static/threads-green.svg"
                   alt=""
                 />
               </a>
@@ -1019,29 +916,17 @@
           </div>
         </div>
       </section>
-      <span class="flex items-center justify-center">Made by <a style="color: #07C; margin-left: 0.25rem;">#BowlingPin</a></span>
+      <span class="flex items-center justify-center"
+        >Made by
+        <a style="color: #07c; margin-left: 0.25rem">#BowlingPin</a></span
+      >
     </div>
     <!-- End .main -->
-   
     <!--Import Vendor Js-->
-    <script src="static/modernizr-3.6.0.min.js.download"></script>
-    <script src="static/jquery-3.6.0.min.js.download"></script>
-    <script src="static/waypoints.js.download"></script>
-    <script src="static/counterup.js.download"></script>
-    <script src="static/slick.js.download"></script>
-    <script src="static/scrollup.js.download"></script>
-    <script src="static/smooth.js.download"></script>
-    <script src="static/textType.js.download"></script>
-    <script src="static/mobile-menu.js.download"></script>
-    <script src="static/main.js.download"></script>
-   
-    <script
-      defer=""
-      src="static/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-      data-cf-beacon='{"rayId":"95246977db9dc9e4","version":"2025.6.2","r":1,"token":"3aa9a3481f734e94bceb8bb1bd648ba1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}'
-      crossorigin="anonymous"
-    ></script>
+    <script src="static/jquery-3.6.0.min.js"></script>
+    <script src="static/textType.js"></script>
+    <script src="static/mobile-menu.js"></script>
+    <script src="static/main.js"></script>
     <style type="text/css">
       .typewrite > .wrap {
         border-right: 0.05em solid rgba(147, 197, 253);
