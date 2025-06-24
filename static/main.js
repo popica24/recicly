@@ -61,3 +61,14 @@
     }
   });
 })(jQuery);
+
+function openWhatsApp() {
+  // Înlocuiește cu numărul real de WhatsApp
+  const phoneNumber = "+40123456789";
+  const message =
+    "Salut! Sunt interesat de serviciile de reciclare EcoTransform.";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+    message
+  )}`;
+  window.open(url, "_blank");
+}

@@ -30,33 +30,34 @@
             </a>
             <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li class="relative pt-4 pb-4">
-                <a class="text-sm font-semibold hover:text-green-600" href="/"
+                <a
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
+                  href="/"
                   >Acasa</a
                 >
               </li>
               <li class="pt-4 pb-4">
                 <a
-                  class="text-sm font-semibold text-green-600 cursor-pointer transition-colors"
+                  href="despre-noi.html"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
                   >Despre noi</a
                 >
               </li>
               <li class="pt-4 pb-4">
-                <a
-                  href="servicii.html"
-                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
+                <a class="text-sm font-semibold text-green-600 cursor-pointer"
                   >Servicii</a
                 >
               </li>
               <li class="relative pt-4 pb-4">
-                <a
+                <s
                   class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
-                  >Contact</a
+                  >Contact</s
                 >
               </li>
               <li class="relative pt-4 pb-4">
-                <a
+                <s
                   class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
-                  >Desfasurare Proiect</a
+                  >Desfasurare Proiect</s
                 >
               </li>
             </ul>
@@ -114,33 +115,34 @@
             <ul class="mobile-menu">
               <li class="mb-1 menu-itemren rounded-xl">
                 <a
+                  href="/"
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500 rounded-xl"
                   >Acasa</a
                 >
               </li>
               <li class="mb-1 rounded-xl">
                 <a
+                  href="despre-noi.html"
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500 rounded-xl"
                   >Despre noi</a
                 >
               </li>
               <li class="mb-1">
                 <a
-                  href="/servicii.html"
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
-                  >Servicii / Produse</a
+                  >Servicii</a
                 >
               </li>
               <li class="mb-1 menu-itemren rounded-xl">
-                <a
+                <s
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
-                  >Contact</a
+                  >Contact</s
                 >
               </li>
               <li class="mb-1">
-                <a
+                <s
                   class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
-                  >Desfasurare proiect</a
+                  >Desfasurare proiect</s
                 >
               </li>
             </ul>
@@ -180,64 +182,137 @@
         </nav>
       </div>
       <!--Hero-->
-      <section class="-mt-24 pt-24">
-        <div
-          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-100 z-0"
-          style="z-index: -1"
-        ></div>
+      <section class="-mt-24 pt-40">
         <div class="container">
-          <div class="flex flex-wrap items-center -mx-3">
-            <div class="w-full lg:w-1/2 px-3">
-              <div class="py-12">
-                <div
-                  class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left"
-                >
-                  <h2
-                    class="text-3xl lg:text-4xl mb-4 font-bold font-heading"
-                    style="visibility: visible; animation-name: fadeIn"
-                  >
-                    Angajați în <span class="text-green-600">reciclare</span>,
-                    <br />Angajați în viitorul verde
-                  </h2>
-                  <p
-                    class="leading-relaxed"
-                    style="visibility: visible; animation-name: fadeIn"
-                  >
-                    Suntem <strong class="text-green-600">NUME FIRMA</strong>,
-                    specializați în
-                    <span
-                      class="typewrite d-inline text-brand"
-                      data-period="3000"
-                      data-type='["Procesarea Cartonului", "Reciclarea Plasticului", "Materie Primă Regenerată"]'
-                      ><span class="wrap">Reciclare</span></span
-                    >
-                  </p>
-                  <p
-                    class="text-blueGray-400 leading-relaxed mt-3 text-sm"
-                    style="visibility: visible; animation-name: fadeIn"
-                  >
-                    Reciclare mai <span class="text-green-600">rapidă</span>,
-                    procese mai inteligente
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="w-full lg:w-1/2 px-3 lg:bg-blueGray-10 mb-12 lg:mb-0 pb-10"
+          <h2
+            class="text-2xl lg:text-4xl lg:leading-normal font-bold font-heading"
+          >
+            Ce
+            <span class="text-green-600">servicii</span> oferim?
+          </h2>
+          <p class="leading-relaxed">
+            Suntem <strong class="text-green-600">NUME FIRMA</strong>,
+            specializați în
+            <span
+              class="typewrite d-inline text-brand"
+              data-period="3000"
+              data-type='["Procesarea Cartonului", "Reciclarea Plasticului", "Materie Primă Regenerată"]'
+              ><span class="wrap">Reciclare</span></span
             >
-              <div class="flex items-center justify-center">
-                <img class="lg:max-w-lg" src="static/team.svg" alt="" />
+          </p>
+        </div>
+      </section>
+      <section class="">
+        <div class="container py-12 mx-auto">
+          <div class="flex flex-wrap">
+            <div
+              class="w-full md:w-1/2 pr-12 px-3 order-0 md:order-0 mb-12 md:mb-0"
+            >
+              <img
+                class="sm:max-w-sm lg:max-w-full mx-auto rounded-md"
+                src="static/img-6.avif"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 px-3 order-1 md:order-1">
+              <div class="max-w-md">
+                <div class="mb-4">
+                  <span
+                    class="text-xs py-1 px-3 text-green-500 font-semibold bg-green-50 rounded-xl"
+                    >De ce sa ne alegi ?</span
+                  >
+                  <h2 class="text-4xl mt-3 font-bold font-heading">
+                    Oferim cele mai bune servicii de
+                    <span class="text-green-500">reciclare </span>
+                  </h2>
+                </div>
+
+                <p class="mb-6 leading-loose text-green-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  luctus eget justo et iaculis.
+                </p>
+
+                <div class="flex flex-wrap">
+                  <div class="w-full md:w-1/2 items-start pt-4 pb-8">
+                    <div class="w-8 mb-5 text-green-500">
+                      <span
+                        class="inline-block py-2 px-4 mr-4 text-xs font-semibold bg-green-500 text-white rounded"
+                        >1</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="mb-2 text-xl font-semibold font-heading">
+                        Serviciu 1
+                      </h3>
+                      <p class="text-green-400 leading-loose text-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Veritatis expedita animi.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2 items-start py-4">
+                    <div class="w-8 mb-5 text-green-500">
+                      <span
+                        class="inline-block py-2 px-4 mr-4 text-xs font-semibold bg-green-500 text-white rounded"
+                        >2</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="mb-2 text-xl font-semibold font-heading">
+                        Serviciu 2
+                      </h3>
+                      <p class="text-green-400 leading-loose text-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Veritatis expedita animi.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2 items-start py-4">
+                    <div class="w-8 mb-5 text-green-500">
+                      <span
+                        class="inline-block py-2 px-4 mr-4 text-xs font-semibold bg-green-500 text-white rounded"
+                        >3</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="mb-2 text-xl font-semibold font-heading">
+                        Serviciu 3
+                      </h3>
+                      <p class="text-green-400 leading-loose text-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Veritatis expedita animi.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2 items-start py-4">
+                    <div class="w-8 mb-5 text-green-500">
+                      <span
+                        class="inline-block py-2 px-4 mr-4 text-xs font-semibold bg-green-500 text-white rounded"
+                        >4</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="mb-2 text-xl font-semibold font-heading">
+                        Serviciu 4
+                      </h3>
+                      <p class="text-green-400 leading-loose text-sm">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Veritatis expedita animi.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="pt-6 pb-2">
+      <section class="pb-4">
         <div class="container">
           <div class="flex flex-wrap justify-between pt-8 pb-16">
-            <div class="flex w-1/2 lg:w-auto py-4">
+            <div class="hover-up-5 flex w-1/2 lg:w-auto py-4">
               <div
-                class="flex justify-center items-center bg-blueGray-50 text-green-600 rounded-xl h-12 w-12 sm:h-24 sm:w-24"
+                class="flex justify-center items-center text-green-500 rounded-xl h-12 w-12 sm:h-20 sm:w-20"
               >
                 <svg
                   class="w-8 h-8"
@@ -255,16 +330,16 @@
                 </svg>
               </div>
               <div class="sm:py-2 ml-2 sm:ml-6">
-                <span class="sm:text-2xl font-bold font-heading">+ </span
-                ><span class="sm:text-2xl font-bold font-heading count"
+                <span class="sm:text-2xl font-bold font-heading">+ </span>
+                <span class="sm:text-2xl font-bold font-heading count"
                   >150</span
                 >
-                <p class="text-xs sm:text-base text-blueGray-400">KPI 1</p>
+                <p class="text-xs sm:text-base text-green-400">KPI 1</p>
               </div>
             </div>
-            <div class="flex w-1/2 lg:w-auto py-4">
+            <div class="hover-up-5 flex w-1/2 lg:w-auto py-4">
               <div
-                class="flex justify-center items-center bg-blueGray-50 text-green-600 rounded-xl h-12 w-12 sm:h-24 sm:w-24"
+                class="flex justify-center items-center text-green-500 rounded-xl h-12 w-12 sm:h-20 sm:w-20"
               >
                 <svg
                   class="w-8 h-8"
@@ -282,15 +357,15 @@
                 </svg>
               </div>
               <div class="sm:py-2 ml-2 sm:ml-6">
-                <span class="sm:text-2xl font-bold font-heading">+ </span
-                ><span class="sm:text-2xl font-bold font-heading count">57</span
-                ><span class="sm:text-2xl font-bold font-heading"> k </span>
-                <p class="text-xs sm:text-base text-blueGray-400">KPI 2</p>
+                <span class="sm:text-2xl font-bold font-heading">+ </span>
+                <span class="sm:text-2xl font-bold font-heading count">56</span>
+                <span class="sm:text-2xl font-bold font-heading"> k </span>
+                <p class="text-xs sm:text-base text-green-400">KPI 2</p>
               </div>
             </div>
-            <div class="flex w-1/2 lg:w-auto py-4">
+            <div class="hover-up-5 flex w-1/2 lg:w-auto py-4">
               <div
-                class="flex justify-center items-center bg-blueGray-50 text-green-600 rounded-xl h-12 w-12 sm:h-24 sm:w-24"
+                class="flex justify-center items-center text-green-500 rounded-xl h-12 w-12 sm:h-20 sm:w-20"
               >
                 <svg
                   class="w-8 h-8"
@@ -308,16 +383,16 @@
                 </svg>
               </div>
               <div class="sm:py-2 ml-2 sm:ml-6">
-                <span class="sm:text-2xl font-bold font-heading">+ </span
-                ><span class="sm:text-2xl font-bold font-heading count"
+                <span class="sm:text-2xl font-bold font-heading">+ </span>
+                <span class="sm:text-2xl font-bold font-heading count"
                   >500</span
                 >
-                <p class="text-xs sm:text-base text-blueGray-400">KPI 3</p>
+                <p class="text-xs sm:text-base text-green-400">KPI 3</p>
               </div>
             </div>
-            <div class="flex w-1/2 lg:w-auto py-4">
+            <div class="hover-up-5 flex w-1/2 lg:w-auto py-4">
               <div
-                class="flex justify-center items-center bg-blueGray-50 text-green-600 rounded-xl h-12 w-12 sm:h-24 sm:w-24"
+                class="flex justify-center items-center text-green-500 rounded-xl h-12 w-12 sm:h-20 sm:w-20"
               >
                 <svg
                   class="w-8 h-8"
@@ -335,167 +410,347 @@
                 </svg>
               </div>
               <div class="sm:py-2 ml-2 sm:ml-6">
-                <span class="sm:text-2xl font-bold font-heading">+ </span
-                ><span class="sm:text-2xl font-bold font-heading count"
+                <span class="sm:text-2xl font-bold font-heading">+ </span>
+                <span class="sm:text-2xl font-bold font-heading count"
                   >320</span
                 >
-                <p class="text-xs sm:text-base text-blueGray-400">KPI 4</p>
+                <p class="text-xs sm:text-base text-green-400">KPI 4</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="py-20 bg-blueGray-50" id="how-we-work">
+
+      <section class="pt-20 pb-16 xl:bg-contain bg-top bg-no-repeat">
         <div class="container">
-          <h2 class="text-3xl md:text-4xl mt-2 mb-4 font-bold font-heading">
-            Misiunea si Viziunea
-            <span class="text-green-600"> noastra </span>
-          </h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-            culpa magni voluptates facilis deleniti! Reprehenderit tenetur, illo
-            pariatur dolore neque aliquam voluptatum aspernatur possimus
-            corporis atque, facilis odit voluptatem molestias.Lorem ipsum, dolor
-            sit amet consectetur adipisicing elit. <br />Repellat culpa magni
-            voluptates facilis deleniti! Reprehenderit tenetur, illo pariatur
-            dolore neque aliquam voluptatum aspernatur possimus corporis atque,
-            facilis odit voluptatem molestias.Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. <br />Repellat culpa magni voluptates
-            facilis deleniti! Reprehenderit tenetur, illo pariatur dolore neque
-            aliquam voluptatum aspernatur possimus corporis atque, facilis odit
-            voluptatem molestias.Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. <br />Repellat culpa magni voluptates facilis
-            deleniti! Reprehenderit tenetur, illo pariatur dolore neque aliquam
-            voluptatum aspernatur possimus corporis atque, facilis odit
-            voluptatem molestias.
-          </p>
-        </div>
-      </section>
-      <section class="py-20">
-        <div class="container text-center">
-          <div class="max-w-lg mx-auto mb-16">
-            <span
-              class="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-600 rounded-xl"
-            >
-              Expertii</span
-            >
-            <h2 class="text-3xl md:text-4xl mt-2 mb-4 font-bold font-heading">
-              O echipă dedicată pentru un
-              <span class="text-green-600">mediu mai curat</span>
+          <div class="text-center mb-16">
+            <h2 class="max-w-lg mx-auto mb-4 text-4xl font-bold font-heading">
+              <span>Salveaza timp si</span>
+              <span class="text-green-500">alege</span>
+              <span>cel mai bun plan</span>
             </h2>
-            <p class="text-blueGray-400 leading-loose">
-              Suntem profesioniști pasionați de sustenabilitate, gata să
-              transformăm provocările reciclării în soluții eficiente, digitale
-              și prietenoase cu natura.
+            <p class="max-w-sm mx-auto text-lg text-green-400">
+              Preturile sunt orientative si pot varia de la benificiar la
+              benificiar.
             </p>
           </div>
-          <div class="flex flex-wrap -mx-5">
-            <div class="w-1/2 lg:w-1/4 px-5 mb-12">
+          <div class="flex flex-wrap -mx-3">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
               <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
+                class="hover-up-5 border border-gray-200 pt-16 pb-8 px-4 text-center bg-white rounded shadow"
               >
                 <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-1.png"
+                  class="h-20 mb-6 mx-auto"
+                  src="static/startup.svg"
                   alt=""
                 />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">CEO, Co Founders</p>
+                <h3 class="mb-2 text-4xl font-bold font-heading">Pret 1</h3>
+                <span class="text-4xl text-green-500 font-bold font-heading"
+                  >RON45.99</span
+                >
+                <p class="mt-2 mb-8 text-green-400">/luna</p>
+                <div class="flex flex-col items-center mb-8">
+                  <ul class="text-green-400">
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <a
+                    class="block sm:inline-block py-4 px-6 text-xs text-green-500 hover:text-green-600 text-center font-semibold leading-none bg-white border border-green-200 hover:border-green-300 rounded"
+                    href="#"
+                    >Suna un operator</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="w-1/2 lg:w-1/4 px-5 mb-12">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
               <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
+                class="hover-up-5 pt-16 pb-8 px-4 text-center text-white bg-green-500 rounded shadow"
               >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-2.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">CEO-Founder</p>
+                <img class="h-20 mb-6 mx-auto" src="static/agency.svg" alt="" />
+                <h3 class="mb-2 text-4xl font-bold font-heading">Pret</h3>
+                <span class="text-4xl font-bold font-heading">RON65.99</span>
+                <p class="mt-2 mb-8">/luna</p>
+                <div class="flex flex-col items-center mb-8">
+                  <ul>
+                    <li class="flex items-center mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex items-center mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex items-center mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="w-6 h-6 mr-2 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <a
+                    class="block sm:inline-block py-4 px-6 text-xs font-semibold leading-none border border border-white rounded"
+                    href="#"
+                    >Suna un operator</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="w-1/2 lg:w-1/4 px-5 mb-12">
+            <div class="w-full lg:w-1/3 px-3 mb-6">
               <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
+                class="hover-up-5 border border-gray-200 pt-16 pb-8 px-4 text-center bg-white rounded shadow"
               >
                 <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-3.png"
+                  class="h-20 mb-6 mx-auto"
+                  src="static/enterprise.svg"
                   alt=""
                 />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Project-Manager</p>
-              </div>
-            </div>
-            <div class="w-1/2 lg:w-1/4 px-5 mb-12">
-              <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
-              >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-4.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Direct-Founder</p>
-              </div>
-            </div>
-            <div class="w-1/2 lg:w-1/4 px-5">
-              <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
-              >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-5.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Director</p>
-              </div>
-            </div>
-            <div class="w-1/2 lg:w-1/4 px-5">
-              <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
-              >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-6.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Marketing</p>
-              </div>
-            </div>
-            <div class="w-1/2 lg:w-1/4 px-5">
-              <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
-              >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-7.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Designer</p>
-              </div>
-            </div>
-            <div class="w-1/2 lg:w-1/4 px-5">
-              <div
-                class="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow border border-gray-100 hover:border-gray-200"
-              >
-                <img
-                  class="mb-6 h-24 w-24 mx-auto rounded-full object-cover object-top"
-                  src="static/avatar-8.png"
-                  alt=""
-                />
-                <strong class="mt-6 mb-2 text-md">Nume Prenume</strong>
-                <p class="text-gray-500 text-xs mt-3">Designer</p>
+                <h3 class="mb-2 text-4xl font-bold font-heading">Pret 3</h3>
+                <span class="text-4xl text-green-500 font-bold font-heading"
+                  >RON85.99</span
+                >
+                <p class="mt-2 mb-8 text-green-400">/luna</p>
+                <div class="flex flex-col items-center mb-8">
+                  <ul class="text-green-400">
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex mb-3">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                    <li class="flex">
+                      <svg
+                        class="w-6 h-6 mr-2 text-green-500"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Chestie</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <a
+                    class="block sm:inline-block py-4 px-6 text-xs text-green-500 hover:text-green-600 text-center font-semibold leading-none bg-white border border-green-200 hover:border-green-300 rounded"
+                    href="#"
+                    >Suna un operator</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <button
+          class="whatsapp-btn flex items-center justify-center"
+          onclick="openWhatsApp()"
+          title="Contactează-ne pe WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0,0,256,256"
+          >
+            <g
+              fill="#ffffff"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <g transform="scale(5.12,5.12)">
+                <path
+                  d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
       </section>
       <section class="bg-top bg-no-repeat">
         <div class="container">
@@ -659,7 +914,6 @@
           </svg>
         </button>
       </section>
-
       <section class="py-20">
         <div class="container px-4 mx-auto">
           <div
@@ -742,14 +996,11 @@
     </div>
     <!-- End .main -->
 
-    <!-- Preloader Start -->
-
     <!--Import Vendor Js-->
     <script src="static/jquery-3.6.0.min.js"></script>
     <script src="static/textType.js"></script>
     <script src="static/mobile-menu.js"></script>
     <script src="static/main.js"></script>
-
     <style type="text/css">
       .typewrite > .wrap {
         border-right: 0.05em solid rgba(147, 197, 253);
@@ -777,7 +1028,6 @@
           successMessage.style.display = "none";
         }, 5000);
       }
-
 
       // Validare în timp real
       document.getElementById("email").addEventListener("input", function (e) {
