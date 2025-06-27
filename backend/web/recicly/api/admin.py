@@ -198,13 +198,6 @@ class BlogPostAdmin(admin.ModelAdmin):
             })
         return form
     
-    # Add custom CSS and JS
-    class Media:
-        css = {
-            'all': ('admin/css/blogpost_admin.css',)
-        }
-        js = ('admin/js/blogpost_admin.js',)
-
 
 # Register the model with the admin
 admin.site.register(BlogPost, BlogPostAdmin)
