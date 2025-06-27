@@ -1,0 +1,76 @@
+services:
+  web:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: ${DOCKERFILE:-Dockerfile.dev}
+    ports:
+      - "${WEB_PORT:-8080:8000}" # In production, set WEB_PORT to an empty value
+    networks:
+      - internal_network # Access the DB
+      - ${PUBLIC_NETWORK:-public_network} # Only include in development
+    env_file:
+      - .env
+    # For development, mount the source code for live reloading.
+    volumes:
+      - ${WEB_VOLUME:-./web:/app} # In production, you can override WEB_VOLUME to an empty value or omit the variable.
+      - static_volume:/app/staticfiles
+    healthcheck:
+      test: ["CMD", "python", "manage.py", "healthcheck"]
+      interval: 50s
+      timeout: 3s
+      retries: 3
+      start_period: 20s
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+  db:
+    image: postgres:16
+    container_name: recicly_db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: recicly
+    ports: []
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d recicly"]
+      interval: 1m30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal_network
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+      PGADMIN_CONFIG_MFA_SUPPORTED_METHODS: '["authenticator"]'
+      PGADMIN_CONFIG_MFA_FORCE_REGISTRATION: "True"
+    ports:
+      - "5050:80"
+    networks:
+      - internal_network # Access the DB
+      - public_network # Access from host
+    depends_on:
+      - db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+  static_volume:
+
+networks:
+  internal_network:
+    driver: bridge
+    internal: true
+  public_network:
+    driver: bridge

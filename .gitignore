@@ -1,1 +1,4 @@
 *.docx
+backend/.env
+backend/web/env
+__pycache__

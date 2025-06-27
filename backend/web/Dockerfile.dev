@@ -1,0 +1,35 @@
+# Use the official Python runtime image
+FROM python:3.13-slim
+
+# Create and set the working directory
+WORKDIR /app
+
+# Set environment variables for Python
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Install UV for faster dependency management
+RUN pip install --upgrade pip && pip install uv
+
+# Install dependencies globally
+COPY requirements.txt ./requirements.txt
+RUN uv pip install --system -r requirements.txt --no-cache
+
+# Copy project code
+COPY . .
+
+# Copy the entrypoint script
+COPY entrypoint.dev.sh /entrypoint.sh
+# Windows text editors typically add carriage return (\r) and line feed (\n) at line endings while Linux expects only line feed (\n)
+RUN chmod +x /entrypoint.sh && \
+    sed -i 's/\r$//g' /entrypoint.sh
+
+# (Optional) Create and switch to a non-root user
+RUN adduser --disabled-password --gecos "" reciclyuser && chown -R reciclyuser:reciclyuser /app
+USER reciclyuser
+
+# Expose Django's default port
+EXPOSE 8000
+
+# Use the entrypoint script to run migrations, then start the local server
+ENTRYPOINT ["/entrypoint.sh"]
