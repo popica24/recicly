@@ -1,0 +1,261 @@
+.container {
+  width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}
+
+.hover-up-5 {
+  transition: 0.3s;
+}
+
+.hover-up-5:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.hover-up-2 {
+  transition: 0.3s;
+}
+
+.hover-up-2:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+.form-header {
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.form-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.form-content {
+  padding: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #22c55e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.form-input:hover {
+  border-color: #d1d5db;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.contact-info {
+  background: #f8fafc;
+  padding: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.contact-info h3 {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.info-text {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-header h2 {
+    font-size: 2rem;
+  }
+
+  .form-content {
+    padding: 30px 20px;
+  }
+
+  .contact-info {
+    padding: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.required {
+  color: #ef4444;
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #bbf7d0;
+  display: none;
+}
+
+/*Animation*/
+@-webkit-keyframes jump {
+  0% {
+    transform: translate3d(0, 15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translate3d(0, 15px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.jump {
+  transform-origin: 0;
+  -webkit-animation: jump 1s linear alternate infinite;
+  animation: jump 1s linear alternate infinite;
+}

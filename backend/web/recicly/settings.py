@@ -29,8 +29,7 @@ DEBUG = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:5500",
-    "https://www.alphastar.ro",
-    "http://82.25.97.60"
+    "https://www.alphastar.ro"
 ]
 
 CORS_ALLOW_HEADERS = [

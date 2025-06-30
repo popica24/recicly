@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>WORK IN PROGRESS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tailwind CSS Saas Landing Page" />
+    <meta name="author" content="alithemes.com" />
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon.svg" />
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="static/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-body font-body" style="overflow: visible">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a class="text-3xl font-semibold leading-none">
+              <img
+                class="h-10"
+                src="https://www.trafongroup.com/wp-content/uploads/2019/04/logo-placeholder.png"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="relative pt-4 pb-4">
+                <a class="text-sm font-semibold hover:text-green-600" href="/"
+                  >Acasa</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  href="/despre-noi.html"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
+                  >Despre noi</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  href="servicii.html"
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
+                  >Servicii</a
+                >
+              </li>
+              <li class="relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-green-600 cursor-pointer transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li class="relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold hover:text-green-600 cursor-pointer transition-colors"
+                  >Desfasurare Proiect</a
+                >
+              </li>
+            </ul>
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-green-600 hover:text-green-700 rounded border border-green-200 hover:border-green-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--Mobile menu-->
+      <div
+        class="hidden md:hidden navbar-menu relative z-50 transition duration-300"
+      >
+        <div class="navbar-backdrop fixed inset-0 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-semibold leading-none">
+              <img
+                class="h-10"
+                src="https://www.trafongroup.com/wp-content/uploads/2019/04/logo-placeholder.png"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 cursor-pointer hover:text-green-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 menu-itemren rounded-xl">
+                <a
+                  class="block p-4 text-sm hover:bg-green-50 hover:text-green-500 rounded-xl"
+                  >Acasa</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  href="/despre-noi.html"
+                  class="block p-4 text-sm hover:bg-green-50 hover:text-green-500 rounded-xl"
+                  >Despre noi</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  href="/servicii.html"
+                  class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
+                  >Servicii / Produse</a
+                >
+              </li>
+              <li class="mb-1 menu-itemren rounded-xl">
+                <a
+                  class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
+                  >Contact</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm hover:bg-green-50 hover:text-green-500"
+                  >Desfasurare proiect</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <p class="my-4 text-xs">
+              <span>Contacteaza-ne</span>
+              <a class="text-green-600 hover:text-green-500 underline"
+                >contact@domeniu.ro</a
+              >
+            </p>
+            <a class="inline-block px-1">
+              <img
+                width="20"
+                height="20"
+                src="static/facebook-green.svg"
+                alt=""
+              />
+            </a>
+            <a class="inline-block px-1">
+              <img
+                width="20"
+                height="20"
+                src="static/instagram-green.svg"
+                alt=""
+              />
+            </a>
+            <a class="inline-block px-1">
+              <img
+                width="20"
+                height="20"
+                src="static/threads-green.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </nav>
+      </div>
+      <!--Hero-->
+      <section class="relative pt-24">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-100 z-0"
+        ></div>
+        <div class="container">
+          <div class="flex flex-wrap items-center -mx-3">
+            <div class="w-full lg:w-1/2 px-3">
+              <div class="py-12">
+                <div
+                  class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left"
+                >
+                  <h2
+                    class="text-3xl lg:text-4xl mb-4 font-bold font-heading"
+                    style="visibility: visible; animation-name: fadeIn"
+                  >
+                    Angajați în <span class="text-green-600">reciclare</span>,
+                    <br />Angajați în viitorul verde
+                  </h2>
+                  <p
+                    class="leading-relaxed"
+                    style="visibility: visible; animation-name: fadeIn"
+                  >
+                    Suntem <strong class="text-green-600">NUME FIRMA</strong>,
+                    specializați în
+                    <span
+                      class="typewrite d-inline text-brand"
+                      data-period="3000"
+                      data-type='["Procesarea Cartonului", "Reciclarea Plasticului", "Materie Primă Regenerată"]'
+                      ><span class="wrap">Reciclare</span></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-1/2 px-3 lg:bg-blueGray-10 mb-12 lg:mb-0 pb-10"
+            >
+              <div class="flex items-center justify-center">
+                <img class="lg:max-w-lg" src="/static/team.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-top bg-no-repeat">
+        <div class="container">
+          <div class="form-header text-black">
+            <h2>Contactează-ne</h2>
+            <p>
+              Suntem aici pentru a răspunde întrebărilor tale despre serviciile
+              noastre de reciclare
+            </p>
+          </div>
+          <div class="form-content">
+            <div class="success-message" id="successMessage">
+              Mesajul tău a fost trimis cu succes! Te vom contacta în cel mai
+              scurt timp.
+            </div>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="nume">
+                    Nume <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="nume"
+                    name="nume"
+                    class="form-input"
+                    required
+                    placeholder="Introduceți numele"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="prenume">
+                    Prenume <span class="required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="prenume"
+                    name="prenume"
+                    class="form-input"
+                    required
+                    placeholder="Introduceți prenumele"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="companie"> Companie </label>
+                  <input
+                    type="text"
+                    id="companie"
+                    name="companie"
+                    class="form-input"
+                    placeholder="Numele companiei"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="telefon">
+                    Număr de telefon <span class="required">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="telefon"
+                    name="telefon"
+                    class="form-input"
+                    required
+                    placeholder="+40 7XX XXX XXX"
+                  />
+                </div>
+                <div class="form-full-width">
+                  <label class="form-label" for="email">
+                    Email <span class="required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    required
+                    placeholder="exemplu@email.com"
+                  />
+                </div>
+                <div class="form-full-width">
+                  <label class="form-label" for="mesaj">
+                    Mesaj <span class="required">*</span>
+                  </label>
+                  <textarea
+                    id="mesaj"
+                    name="mesaj"
+                    class="form-input form-textarea"
+                    required
+                    placeholder="Descrieți cererea sau întrebarea dumneavoastră..."
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn bg-green-600">
+                Trimite Mesajul
+              </button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Informații de Contact</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-icon bg-gray-200">📞</div>
+                <div class="info-text">
+                  <a href="tel:+40123456789"> +40 123 456 789 </a>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon bg-gray-200">📧</div>
+                <div class="info-text">contact@ecotransform.ro</div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon bg-gray-200">📍</div>
+                <div class="info-text">Pitești, Argeș, România</div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon bg-gray-200">🕒</div>
+                <div class="info-text">Luni - Vineri: 08:00 - 17:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Buton WhatsApp flotant -->
+        <button
+          class="whatsapp-btn flex items-center justify-center"
+          onclick="openWhatsApp()"
+          title="Contactează-ne pe WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0,0,256,256"
+          >
+            <g
+              fill="#ffffff"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <g transform="scale(5.12,5.12)">
+                <path
+                  d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </section>
+
+      <section class="py-20">
+        <div class="container px-4 mx-auto">
+          <div
+            class="flex flex-wrap mb-12 lg:mb-20 -mx-3 text-center lg:text-left"
+          >
+            <div class="w-full lg:w-1/5 px-3 mb-6 lg:mb-0">
+              <a
+                class="inline-block mx-auto lg:mx-0 text-3xl font-semibold leading-none"
+              >
+                <img
+                  class="h-10"
+                  src="https://www.trafongroup.com/wp-content/uploads/2019/04/logo-placeholder.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="w-full lg:w-2/5 px-3 mb-8 lg:mb-0">
+              <p
+                class="max-w-md mx-auto lg:max-w-full lg:mx-0 lg:pr-32 lg:text-lg leading-relaxed"
+              >
+                Reciclare eficientă <strong>management inteligent</strong>.
+              </p>
+            </div>
+            <div class="w-full lg:w-1/5 px-3 mb-8 lg:mb-0">
+              <p class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading">
+                Office
+              </p>
+              <p class="lg:text-lg">
+                Pitești, Argeș, România, Strada Reciclarii
+              </p>
+            </div>
+            <div class="w-full lg:w-1/5 px-3">
+              <p class="mb-2 lg:mb-4 lg:text-lg font-bold font-heading">
+                Contacts
+              </p>
+              <p class="lg:text-lg">+40 123 456 789</p>
+              <p class="lg:text-lg">contact@domeniu.com</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:justify-between"
+          >
+            <p class="text-sm">
+              © 2025. All rights reserved.
+              <a class="text-green-400" href="/" target="_blank">NUME FIRMA</a>
+            </p>
+            <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0">
+              <a class="inline-block px-2">
+                <img
+                  width="20"
+                  height="20"
+                  src="static/facebook-green.svg"
+                  alt=""
+                />
+              </a>
+              <a class="inline-block px-2">
+                <img
+                  width="20"
+                  height="20"
+                  src="static/instagram-green.svg"
+                  alt=""
+                />
+              </a>
+              <a class="inline-block px-2">
+                <img
+                  width="20"
+                  height="20"
+                  src="static/threads-green.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="whatsapp-btn flex items-center justify-center"
+          onclick="openWhatsApp()"
+          title="Contactează-ne pe WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0,0,256,256"
+          >
+            <g
+              fill="#ffffff"
+              fill-rule="nonzero"
+              stroke="none"
+              stroke-width="1"
+              stroke-linecap="butt"
+              stroke-linejoin="miter"
+              stroke-miterlimit="10"
+              stroke-dasharray=""
+              stroke-dashoffset="0"
+              font-family="none"
+              font-weight="none"
+              font-size="none"
+              text-anchor="none"
+              style="mix-blend-mode: normal"
+            >
+              <g transform="scale(5.12,5.12)">
+                <path
+                  d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </section>
+      <span class="flex items-center justify-center"
+        >Made by
+        <a style="color: #07c; margin-left: 0.25rem">#BowlingPin</a></span
+      >
+    </div>
+    <!-- End .main -->
+    <!--Import Vendor Js-->
+    <script src="static/jquery-3.6.0.min.js"></script>
+    <script src="static/textType.js"></script>
+    <script src="static/mobile-menu.js"></script>
+    <script src="static/main.js"></script>
+    <style type="text/css">
+      .typewrite > .wrap {
+        border-right: 0.05em solid rgba(147, 197, 253);
+      }
+    </style>
+  </body>
+</html>
