@@ -2,3 +2,4 @@
 backend/.env
 backend/web/env
 __pycache__
+backend/env
