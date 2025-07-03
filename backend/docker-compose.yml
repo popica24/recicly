@@ -1,11 +1,32 @@
 services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/letsencrypt
+      - ./certbot-webroot:/var/www/certbot
+    networks:
+      - public_network
+    depends_on:
+      - web
+    restart: always
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./ssl:/etc/letsencrypt
+      - ./certbot-webroot:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email andreip927@gmail.com --agree-tos --no-eff-email -d admin.alphastar.ro
   web:
     container_name: web
     build:
       context: ./web
       dockerfile: ${DOCKERFILE:-Dockerfile.dev}
-    ports:
-      - "${WEB_PORT:-8080:8000}" # In production, set WEB_PORT to an empty value
+    ports: []
     networks:
       - internal_network # Access the DB
       - ${PUBLIC_NETWORK:-public_network} # Only include in development

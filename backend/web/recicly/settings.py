@@ -27,10 +27,7 @@ SECRET_KEY = 'django-insecure-jb)o8g4#dlk)u2szaqpmq)e*asx4%p*5(dv2ey09aunym4^h2+
 DEBUG = True
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
-    "https://www.alphastar.ro",
-    "http://82.25.97.60"
+    "http://admin.alphastar.ro"
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -45,7 +42,7 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
 ]
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
+ALLOWED_HOSTS = ["admin.alphastar.ro"]
 
 
 # Application definition
