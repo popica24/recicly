@@ -26,12 +26,10 @@ SECRET_KEY = 'django-insecure-jb)o8g4#dlk)u2szaqpmq)e*asx4%p*5(dv2ey09aunym4^h2+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5500",
-    "http://127.0.0.1:5500",
-    "https://www.alphastar.ro",
-    "http://82.25.97.60"
-]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
+CORS_ALLOWED_ORIGINS = os.getenv("DJANGO_ALLOWED_HEADERS", "localhost").split(",")
 
 CORS_ALLOW_HEADERS = [
     'accept',
@@ -44,6 +42,8 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+CSRF_TRUSTED_ORIGINS =os.getenv("DJANGO_ALLOWED_HEADERS", "localhost").split(",")
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
 
