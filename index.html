@@ -769,6 +769,79 @@
         <a style="color: #07c; margin-left: 0.25rem">#BowlingPin</a></span
       >
     </div>
+
+    <div
+      id="blog-modal"
+      class="relative z-10 hidden"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <!-- Background backdrop -->
+      <div
+        class="fixed inset-0 bg-gray-500/75 transition-opacity"
+        aria-hidden="true"
+      ></div>
+
+      <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div
+          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+        >
+          <!-- Modal panel -->
+          <div
+            class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl"
+          >
+            <!-- Modal header -->
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-lg font-semibold text-gray-900"
+                  id="modal-title"
+                >
+                  Blog Post
+                </h3>
+                <button
+                  id="close-modal"
+                  class="text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 rounded-md p-1"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal content -->
+              <div id="modal-content" class="max-h-96 overflow-y-auto">
+                <!-- Blog post content will be rendered here -->
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div
+              class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6"
+            >
+              <button
+                id="close-modal-btn"
+                type="button"
+                class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 sm:ml-3 sm:w-auto"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- End .main -->
     <!--Import Vendor Js-->
     <script src="static/jquery-3.6.0.min.js"></script>
@@ -776,10 +849,123 @@
     <script src="static/mobile-menu.js"></script>
     <script src="static/main.js"></script>
     <script>
-      // Latest Blog Posts API Integration
+      // Modal functionality
+      class BlogModal {
+        constructor() {
+          this.modal = document.getElementById("blog-modal");
+          this.modalContent = document.getElementById("modal-content");
+          this.modalTitle = document.getElementById("modal-title");
+          this.closeBtn = document.getElementById("close-modal");
+          this.closeBtnFooter = document.getElementById("close-modal-btn");
+
+          this.initEventListeners();
+        }
+
+        initEventListeners() {
+          // Close modal events
+          this.closeBtn.addEventListener("click", () => this.close());
+          this.closeBtnFooter.addEventListener("click", () => this.close());
+
+          // Close modal when clicking outside
+          this.modal.addEventListener("click", (e) => {
+            if (e.target === this.modal) {
+              this.close();
+            }
+          });
+
+          // Close modal with Escape key
+          document.addEventListener("keydown", (e) => {
+            if (
+              e.key === "Escape" &&
+              !this.modal.classList.contains("hidden")
+            ) {
+              this.close();
+            }
+          });
+        }
+
+        open(post) {
+          this.renderPost(post);
+          this.modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        }
+
+        close() {
+          this.modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+
+        renderPost(post) {
+          this.modalTitle.textContent = post.title;
+
+          const timestamp = post.date_published || post.date_created;
+          const date = new Date(timestamp);
+          const displayDate = date.toLocaleString("ro-RO", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+
+          // Format content paragraphs
+          const contentParts = post.content.split("\r\n\r\n");
+          const hasImages = post.photo_urls && post.photo_urls.length > 0;
+
+          let contentHtml = `
+            <div class="space-y-6">
+              <!-- Post header -->
+              <div class="border-b pb-4">
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">${post.title}</h1>
+                <p class="text-gray-600 mb-2">${post.subtitle}</p>
+                <p class="text-sm text-gray-500">${displayDate}</p>
+              </div>
+          `;
+
+          if (hasImages) {
+            // Show first image
+            contentHtml += `
+              <div class="w-full">
+                <img class="w-full h-64 object-cover rounded-lg shadow-md" 
+                     src="${post.photo_urls[0]}" 
+                     alt="${post.title}" 
+                     onerror="this.style.display='none'" />
+              </div>
+            `;
+          }
+
+          // Add content paragraphs
+          contentHtml += '<div class="prose max-w-none">';
+
+          contentParts.forEach((paragraph, index) => {
+            if (paragraph.trim()) {
+              contentHtml += `<p class="mb-4 text-gray-700 leading-relaxed">${paragraph.trim()}</p>`;
+
+              // Insert second image after first paragraph if available
+              if (index === 0 && hasImages && post.photo_urls.length > 1) {
+                contentHtml += `
+                  <div class="w-full my-6">
+                    <img class="w-full h-64 object-cover rounded-lg shadow-md" 
+                         src="${post.photo_urls[1]}" 
+                         alt="${post.title}" 
+                         onerror="this.style.display='none'" />
+                  </div>
+                `;
+              }
+            }
+          });
+
+          contentHtml += "</div></div>";
+
+          this.modalContent.innerHTML = contentHtml;
+        }
+      }
+
+      // Enhanced BlogPostsAPI with modal integration
       class BlogPostsAPI {
         constructor() {
-          this.baseURL = "https://admin.alphastar.ro/api"; // Update with your API URL
+          this.baseURL = "https://admin.alphastar.ro/api";
+          this.modal = new BlogModal();
           this.init();
         }
 
@@ -792,7 +978,6 @@
             this.showLoading();
             this.hideError();
 
-            // Get latest 2 posts with pagination
             const url = `${this.baseURL}/posts/?page=1&page_size=2`;
             const response = await fetch(url, {
               method: "GET",
@@ -822,7 +1007,6 @@
             return;
           }
 
-          // Handle both paginated and non-paginated responses
           const posts = data.results || data;
 
           if (!Array.isArray(posts) || posts.length === 0) {
@@ -831,24 +1015,25 @@
             return;
           }
 
-          // Take only the first 2 posts (latest)
           const latestPosts = posts.slice(0, 2);
           container.innerHTML = latestPosts
             .map((post) => this.createPostHTML(post))
             .join("");
+
+          // Add click events to post cards
+          this.addPostClickEvents(latestPosts);
         }
 
         createPostHTML(post) {
-          // Extract fields from your BlogPost model
           const title = post.title || "Untitled";
           const subtitle = post.subtitle;
-          const image = post.photo_urls[0] || "static/img-2.jpg";
+          const image =
+            post.photo_urls[0] ||
+            "https://via.placeholder.com/400x300?text=No+Image";
           const slug = post.slug || post.id;
-          const postUrl = `/postari/${slug}/`; // Update with your post detail URL pattern
 
           const timestamp = post.date_published || post.date_created;
           const date = new Date(timestamp);
-
           const displayDate = date.toLocaleString("ro-RO", {
             year: "numeric",
             month: "long",
@@ -858,28 +1043,33 @@
           });
 
           return `
-            <div class="px-3 pb-5">
-                <div class="group flex flex-col">
-                    <img class="rounded-xl w-full h-48 object-cover" src="${image}" alt="${title}" onerror="this.src='static/img-2.jpg'" />
-                    <div class="flex justify-start items-start flex-col">
-                        <div>
-                            <h1 class="mt-5 text-xl font-semibold group-hover:text-green-500">
-                                ${title}
-                            </h1>
-                            <p class="mt-2 text-xs text-gray-500">${subtitle}</p>
-                            <p class="mt-2 text-xs text-gray-400">${displayDate}</p>
-                        </div>
-                        <div>
-                            <a href="${postUrl}" 
-                               class="tracking-wide hover-up-2 mr-2 mt-2 inline-block px-4 py-3 text-xs text-green-600 font-semibold leading-none border border-green-200 hover:border-green-500 hover:text-white hover:bg-green-500 rounded"
-                               tabindex="0">
-                                Vezi postare
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <img class="w-full h-48 object-cover" src="${image}" alt="${title}" onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'" />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors cursor-pointer" data-post-id="${post.id}">
+                  ${title}
+                </h3>
+                <p class="text-gray-600 text-sm mb-3 line-clamp-2">${subtitle}</p>
+                <p class="text-gray-500 text-xs mb-4">${displayDate}</p>
+                <button class="view-post-btn bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors" data-post-id="${post.id}">
+                  View Post
+                </button>
+              </div>
             </div>
-        `;
+          `;
+        }
+
+        addPostClickEvents(posts) {
+          // Add click events to titles and buttons
+          document.querySelectorAll("[data-post-id]").forEach((element) => {
+            element.addEventListener("click", (e) => {
+              const postId = parseInt(e.target.dataset.postId);
+              const post = posts.find((p) => p.id === postId);
+              if (post) {
+                this.modal.open(post);
+              }
+            });
+          });
         }
 
         showLoading() {
@@ -914,13 +1104,10 @@
         }
       }
 
-      // Initialize the API when DOM is loaded
+      // Initialize when DOM is loaded
       document.addEventListener("DOMContentLoaded", () => {
         new BlogPostsAPI();
       });
-
-      // Alternative: If you want to call it manually
-      // const blogAPI = new BlogPostsAPI();
     </script>
     <style type="text/css">
       .typewrite > .wrap {
