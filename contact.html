@@ -500,6 +500,100 @@
     <script src="static/textType.js"></script>
     <script src="static/mobile-menu.js"></script>
     <script src="static/main.js"></script>
+    <script>
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = document.getElementById("contactForm");
+        const submitBtn = form.querySelector(".submit-btn");
+
+        // Disable submit button to prevent multiple submissions
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Se trimite...";
+
+        try {
+          // Create FormData object from the form
+          const formData = new FormData(form);
+
+          // Alternative: Create a plain object if your endpoint expects JSON
+          const data = {
+            nume: formData.get("nume"),
+            prenume: formData.get("prenume"),
+            companie: formData.get("companie"),
+            telefon: formData.get("telefon"),
+            email: formData.get("email"),
+            mesaj: formData.get("mesaj"),
+          };
+
+          // Replace with your actual endpoint URL
+          const endpoint =
+            "https://script.google.com/macros/s/AKfycbxSh76fzxB5kAv3OIVoAUhNsk-JqMVbLW6LDWTf0k2jB_sIqF8dHROWRVOxOs-H5gRs7Q/exec";
+
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+            body: JSON.stringify(data),
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            console.log("Success:", result);
+
+            // Show success message
+            showMessage("Mesajul a fost trimis cu succes!", "success");
+
+            // Reset the form
+            form.reset();
+          } else {
+            throw new Error(`Server error: ${response.status}`);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+
+          // Show error message
+          showMessage(
+            "A apărut o eroare. Vă rugăm să încercați din nou.",
+            "error"
+          );
+        } finally {
+          // Re-enable submit button
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Trimite Mesajul";
+        }
+      }
+
+      // Helper function to show messages to the user
+      function showMessage(message, type) {
+        // Create message element
+        const messageDiv = document.createElement("div");
+        messageDiv.className = `message ${type}`;
+        messageDiv.textContent = message;
+
+        // Style the message
+        messageDiv.style.cssText = `
+    padding: 12px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-weight: 500;
+    ${
+      type === "success"
+        ? "background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"
+        : "background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;"
+    }
+  `;
+
+        // Insert message before the form
+        const form = document.getElementById("contactForm");
+        form.parentNode.insertBefore(messageDiv, form);
+
+        // Remove message after 5 seconds
+        setTimeout(() => {
+          messageDiv.remove();
+        }, 5000);
+      }
+    </script>
     <style type="text/css">
       .typewrite > .wrap {
         border-right: 0.05em solid rgba(147, 197, 253);
